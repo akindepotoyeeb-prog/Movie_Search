@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search Result</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #dbdbdb;
+        color: #ffffff;
+        max-width: 900px;
+      }
+
+      /* Container */
+      .container {
+        width: 90%;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      /* Search Header */
+      /* .search-bar {
+        background: #1c1c1f;
+        padding: 15px 20px;
+        border-radius: 30px;
+        color: #aaa;
+        margin-bottom: 30px;
+      } */
+
+      /* Card */
+      .card {
+        background: #9c0d6a;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(227, 202, 11, 0.5);
+      }
+
+      /* Top Tags */
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .tag {
+        background: #e88a07;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      /* Layout */
+      .content {
+        display: flex;
+        gap: 20px;
+      }
+
+      .poster {
+        width: 70%;
+        border-radius: 10px;
+      }
+
+      .details h2 {
+        margin: 0 0 10px;
+      }
+
+      .details p {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      /* Info Section */
+      .info {
+        margin-top: 15px;
+      }
+
+      .info div {
+        margin: 8px 0;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      /* 📱 Mobile Responsive */
+      @media screen and (max-width: 768px) {
+        .container {
+          margin: 20px 10px;
+          padding: 10px;
+        }
+
+        .search-bar {
+          font-size: 14px;
+          padding: 12px 15px;
+        }
+
+        .card {
+          padding: 15px;
+          border-radius: 15px;
+        }
+
+        /* Stack layout */
+        .content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .poster {
+          width: 140px;
+          margin-bottom: 15px;
+        }
+
+        .details h2 {
+          font-size: 20px;
+        }
+
+        .details p {
+          font-size: 13px;
+        }
+
+        /* Tags wrap nicely */
+        .tags {
+          justify-content: center;
+        }
+
+        .tag {
+          font-size: 12px;
+          padding: 6px 10px;
+        }
+
+        .info {
+          text-align: left;
+        }
+
+        .info div {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- <div class="search-bar">🔍 omdbapi.com/?t=wednesday</div> -->
+
+      <div class="card">
+        <!-- Tags -->
+        <div class="tags">
+          <div class="tag">Year: 2022–</div>
+          <div class="tag">Rated: TV-14</div>
+          <div class="tag">Released: 23 Nov 2022</div>
+          <div class="tag">Genre: Comedy, Crime, Fantasy</div>
+          <div class="tag">Language: English</div>
+          <div class="tag">Country: United States</div>
+        </div>
+
+        <div class="content">
+          <img src="./images/al wujuudy luandry service.jpg" class="poster" />
+
+          <div class="details">
+            <h1>Wednesday</h1>
+            <p>
+              Follows Wednesday Addams' years as a student at Nevermore Academy,
+              where she attempts to master her psychic ability, thwart a killing
+              spree, and solve the mystery that embroiled her parents.
+            </p>
+
+            <div class="info">
+              <div><strong>Writer:</strong> Alfred Gough, Miles Millar</div>
+              <div>
+                <strong>Actors:</strong> Jenna Ortega, Emma Myers, Hunter Doohan
+              </div>
+              <div><strong>IMDb Rating:</strong> ⭐ 8.0 / 10</div>
+              <div>
+                <strong>Awards:</strong> 4 Primetime Emmys, 23 wins & 78
+                nominations
+              </div>
+              <div><strong>Seasons:</strong> 3</div>
+              <div><strong>Runtime:</strong> N/A</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="all">
+      <div class="parent">
+        <main>
+          <h2 class="Title">Wednesday <span class="Year">2022</span></h2>
+          <img src="./images/al wujuudy luandry service.jpg" style="width: 70%;" class="Poster"></img>
+        </main>
+        <aside>
+            <h5 class="Title">wednesday</h5>
+            <div class="Released">Released</div>
+            <div class="Genre">Genre</div>
+            <div class="Language">Language</div>
+            <div></div>
+            <div></div>
+            <div class="Country">Country</div>
+            <div class="Actors">Actors</div>
+            <div class="Director">Director</div>
+            <div class="Writer">Writer</div>
+            <div class="Plot">Plot</div>
+            <div></div>
+            <div></div>
+        </aside>
+
+        <footer></footer>
+      </div>
+    </div>
+  </body>
+</html> -->
+  </body>
+</html>
