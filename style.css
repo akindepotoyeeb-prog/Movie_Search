@@ -86,12 +86,18 @@ input:hover {
 .search {
   width: 100px;
   height: 35px; /*  */
+  padding: 5px 15px;
   background: linear-gradient(135deg, #ffd000, rgb(89, 255, 0));
   border-radius: 10px;
   /* padding: px; */
   font-size: 16px;
   /* font-weight: larger; */
+  text-decoration: none;
   cursor: pointer;
+  border: 2px solid #dadada;
+  color: black;
+  font-size: large;
+  font-weight: 500;
 }
 /* ====================================================
 
