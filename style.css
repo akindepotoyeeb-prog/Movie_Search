@@ -6,8 +6,10 @@
 
 body {
   font-family: sans-serif;
-
   background-color: #dbdbdb;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
 }
 
 .all {
@@ -35,8 +37,7 @@ header {
   border: 2px solid rgb(196, 196, 196);
   font-size: large;
   text-align: center;
-  /* border: 1px solid black; */
-
+ 
 }
 
 h1 {
@@ -112,11 +113,47 @@ input:hover {
   /* border: 1px solid black; */
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
+  .all {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: violet; */
+    color: white;
+  }
+
   header {
     width: 60%;
     border-radius: 30px;
-    margin: 10px;
+    margin: 50px;
+    padding: 20px;
+    height: 200px;
+    background-color: #9c0d6a;
+    /* justify-items: center; */
+    border: 2px solid rgb(196, 196, 196);
+    font-size: large;
+    text-align: center;
+    /* border: 1px solid black; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .all {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: violet; */
+    color: white;
+  }
+
+  header {
+    width: 90%;
+    border-radius: 30px;
+    margin: 20px;
     padding: 20px;
     height: 200px;
     background-color: #9c0d6a;
