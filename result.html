@@ -11,31 +11,32 @@
         font-family: "Segoe UI", sans-serif;
         background: #dbdbdb;
         color: #ffffff;
-        max-width: 900px;
+        max-width: 1440px;
+        width: 100%;
       }
 
       /* Container */
       .container {
-        width: 90%;
+        width: 60%;
         margin: 40px auto;
         padding: 20px;
       }
 
       /* Search Header */
-      /* .search-bar {
+      .search-bar {
         background: #1c1c1f;
         padding: 15px 20px;
         border-radius: 30px;
         color: #aaa;
         margin-bottom: 30px;
-      } */
+      }
 
       /* Card */
       .card {
         background: #9c0d6a;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: 0 10px 30px rgba(227, 202, 11, 0.5);
+        box-shadow: 0 10px 30px #3e3e3e80;
       }
 
       /* Top Tags */
@@ -62,7 +63,7 @@
       }
 
       .poster {
-        width: 70%;
+        width: 50%;
         border-radius: 10px;
       }
 
@@ -147,7 +148,39 @@
 
   <body>
     <div class="container">
-      <!-- <div class="search-bar">🔍 omdbapi.com/?t=wednesday</div> -->
+      <div style="position: relative">
+        <input
+          type="text"
+          placeholder="Search for a movie..."
+          style="
+            width: 97%;
+            padding: 10px 15px;
+            border-radius: 30px;
+            border: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+          "
+        />
+        <button
+          style="
+            position: absolute;
+            right: 7px;
+            top: 35%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #ffd000, rgb(89, 255, 0));
+            border-radius: 10px;
+            padding: 5px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            color: black;
+            font-weight: 500;
+          "
+          class="search"
+        >
+          Search
+        </button>
+      </div>
 
       <div class="card">
         <!-- Tags -->

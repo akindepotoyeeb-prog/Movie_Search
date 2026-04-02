@@ -37,7 +37,6 @@ header {
   border: 2px solid rgb(196, 196, 196);
   font-size: large;
   text-align: center;
- 
 }
 
 h1 {
@@ -142,6 +141,23 @@ input:hover {
     font-size: large;
     text-align: center;
     /* border: 1px solid black; */
+  }
+
+  .search {
+    width: 100px;
+    height: 35px; /*  */
+    padding: 5px 15px;
+    background: linear-gradient(135deg, #ffd000, rgb(89, 255, 0));
+    border-radius: 10px;
+    /* padding: px; */
+    font-size: 16px;
+    /* font-weight: larger; */
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #dadada;
+    color: black;
+    font-size: large;
+    font-weight: 500;
   }
 }
 
