@@ -1,44 +1,63 @@
-const apiKey = "YOUR_API_KEY"; // get from omdbapi.com
+// Replace 'your_api_key' with your actual OMDb API key
+const BASE_URL = "https://www.omdbapi.com/";
+const API_KEY = "23f7b537"; 
 
-const searchInput = document.querySelector('.search');
-const resultsContainer = document.querySelector('.results');
+const movieInput = document.getElementById('movieInput');
 
-async function searchMovies() {
-  const query = searchInput.value;
+async function searchMovie(event) {
+    // 1. Prevent the default link/form behavior (Stop the reload!)
+    if (event) event.preventDefault();
 
-  if (!query) return;
+    const query = movieInput.value.trim().toLowerCase();
 
-  try {
-    const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`);
-    const data = await response.json();
+    if (query === "") {
+        alert("Please enter a movie name");
+        return;
+    }
 
-    displayMovies(data.Search);
-  } catch (error) {
-    console.log("Error fetching movies:", error);
-  }
+    try {
+        // 2. Fetch data from the API
+        const response = await fetch(`${BASE_URL}?t=${query}&apikey=${API_KEY}`);
+        const data = await response.json();
+
+        if (data.Response === "True") {
+            // 3. Store the result in localStorage so result.html can see it
+            localStorage.setItem('searchResult', JSON.stringify(data));
+            
+            // 4. Redirect to the results page
+            window.location.href = "result.html";
+        } else {
+            alert("Movie not found!");
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
 }
 
-function displayMovies(movies) {
-  resultsContainer.innerHTML = "";
+// --- Logic for result.html ---
+// This runs only if we are on the result page
+if (window.location.pathname.includes("result.html")) {
+    window.onload = function() {
+        const movieData = JSON.parse(localStorage.getItem('searchResult'));
 
-  if (!movies) {
-    resultsContainer.innerHTML = "No movies found";
-    return;
-  }
-
-  movies.forEach(movie => {
-    const movieCard = document.createElement('div');
-    movieCard.classList.add('movie-card');
-
-    movieCard.innerHTML = `
-      <img src="${movie.Poster}" alt="${movie.Title}">
-      <h3>${movie.Title}</h3>
-      <p>${movie.Year}</p>
-    `;
-
-    resultsContainer.appendChild(movieCard);
-  });
+        if (movieData) {
+            // Update the HTML elements with API data
+            document.querySelector('.details h1').innerText = movieData.Title;
+            document.querySelector('.details p').innerText = movieData.Plot;
+            document.querySelector('.poster').src = movieData.Poster;
+            
+            // Update tags (Year, Rated, etc.)
+            const tags = document.querySelectorAll('.tag');
+            tags[0].innerText = `Year: ${movieData.Year}`;
+            tags[1].innerText = `Rated: ${movieData.Rated}`;
+            tags[2].innerText = `Released: ${movieData.Released}`;
+            tags[3].innerText = `Genre: ${movieData.Genre}`;
+            
+            // Update Info section
+            const infoDivs = document.querySelectorAll('.info div');
+            infoDivs[0].innerHTML = `<strong>Writer:</strong> ${movieData.Writer}`;
+            infoDivs[1].innerHTML = `<strong>Actors:</strong> ${movieData.Actors}`;
+            infoDivs[2].innerHTML = `<strong>IMDb Rating:</strong> ⭐ ${movieData.imdbRating} / 10`;
+        }
+    };
 }
-
-document.querySelector('.search-btn')
-  .addEventListener('click', searchMovies);

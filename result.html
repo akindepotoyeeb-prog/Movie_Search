@@ -148,74 +148,76 @@
 
   <body>
     <div class="container">
-      <div style="position: relative">
-        <input
-          type="text"
-          placeholder="Search for a movie..."
-          style="
-            width: 97%;
-            padding: 10px 15px;
-            border-radius: 30px;
-            border: none;
-            font-size: 16px;
-            margin-bottom: 20px;
-          "
-        />
-        <button
-          style="
-            position: absolute;
-            right: 7px;
-            top: 35%;
-            transform: translateY(-50%);
-            background: linear-gradient(135deg, #ffd000, rgb(89, 255, 0));
-            border-radius: 10px;
-            padding: 5px 15px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            color: black;
-            font-weight: 500;
-          "
-          class="search"
-        >
-          Search
-        </button>
-      </div>
+      <form action="">
+        <div style="position: relative">
+          <input
+            type="text"
+            id="movieInput"
+            placeholder="Search for a movie..."
+            style="
+              width: 97%;
+              padding: 10px 15px;
+              border-radius: 30px;
+              border: none;
+              font-size: 16px;
+              margin-bottom: 20px;
+            "
+            class="search-input"
+          />
+          <button
+            style="
+              position: absolute;
+              right: 7px;
+              top: 35%;
+              transform: translateY(-50%);
+              background: linear-gradient(135deg, #ffd000, rgb(89, 255, 0));
+              border-radius: 10px;
+              padding: 5px 15px;
+              font-size: 16px;
+              border: none;
+              cursor: pointer;
+              color: black;
+              font-weight: 500;
+            "
+            class="search"
+            onclick="searchMovie(event)"
+          >
+            Search
+          </button>
+        </div>
+      </form>
 
-      <div class="card">
+      <div class="card results">
         <!-- Tags -->
         <div class="tags">
-          <div class="tag">Year: 2022–</div>
-          <div class="tag">Rated: TV-14</div>
-          <div class="tag">Released: 23 Nov 2022</div>
-          <div class="tag">Genre: Comedy, Crime, Fantasy</div>
-          <div class="tag">Language: English</div>
-          <div class="tag">Country: United States</div>
+          <div class="tag">Year: --</div>
+          <div class="tag">Rated: --</div>
+          <div class="tag">Released: --</div>
+          <div class="tag">Genre: --</div>
+          <div class="tag">Language: --</div>
+          <div class="tag">Country: --</div>
         </div>
 
         <div class="content">
-          <img src="./images/al wujuudy luandry service.jpg" class="poster" />
+          <img src="" class="poster" alt="Movie Poster" />
 
           <div class="details">
-            <h1>Wednesday</h1>
+            <h1>Movie Title</h1>
             <p>
-              Follows Wednesday Addams' years as a student at Nevermore Academy,
-              where she attempts to master her psychic ability, thwart a killing
-              spree, and solve the mystery that embroiled her parents.
+              Movie plot will appear here....
             </p>
-
+            
             <div class="info">
-              <div><strong>Writer:</strong> Alfred Gough, Miles Millar</div>
+              <div><strong>Writer:</strong> </div>
               <div>
-                <strong>Actors:</strong> Jenna Ortega, Emma Myers, Hunter Doohan
+                <strong>Actors:</strong> 
               </div>
-              <div><strong>IMDb Rating:</strong> ⭐ 8.0 / 10</div>
+              <div><strong>IMDb Rating:</strong> ⭐ </div>
               <div>
-                <strong>Awards:</strong> 4 Primetime Emmys, 23 wins & 78
-                nominations
+                <strong>Awards:</strong> 
               </div>
-              <div><strong>Seasons:</strong> 3</div>
-              <div><strong>Runtime:</strong> N/A</div>
+              <div><strong>Seasons:</strong> </div>
+              <div><strong>Runtime:</strong> </div>
             </div>
           </div>
         </div>
@@ -259,5 +261,6 @@
     </div>
   </body>
 </html> -->
+    <script src="./script.js"></script>
   </body>
 </html>
