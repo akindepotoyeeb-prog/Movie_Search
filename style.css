@@ -118,6 +118,10 @@ input:hover {
   /* border: 1px solid black; */
 }
 
+/* =========================================
+               Desktop View
+============================================= */
+
 @media screen and (max-width: 2560px) {
   .all {
     width: 100%;
@@ -161,6 +165,12 @@ input:hover {
   }
 }
 
+
+/* ==========================================
+
+                phone view
+
+=============================================*/
 @media screen and (max-width: 768px) {
   .all {
     width: 100%;
